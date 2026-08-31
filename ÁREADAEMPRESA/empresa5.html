@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comunicação com ONGs — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Site/demo-bar.css">
+<style>
+  .pane{display:grid;grid-template-columns:300px 1fr;gap:16px}
+  .ong-row{display:flex;justify-content:space-between;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line)}
+  .ong-row:last-child{border-bottom:none}
+  .ong-row strong{font-family:'Fraunces',serif;font-weight:600;font-size:14.5px;color:var(--ink)}
+  .conv{display:flex;flex-direction:column;height:520px}
+  .msgbox{flex:1;overflow:auto;padding:12px 4px;border-bottom:1px solid var(--line)}
+  .msgbox p{padding:9px 13px;border-radius:12px;margin-bottom:8px;max-width:80%;font-size:14px;background:var(--sand-deep)}
+  .msgbox p.me{background:var(--tide);color:#fff;margin-left:auto}
+  .msg-input{display:flex;gap:8px;padding-top:10px}
+  .badge{display:inline-block;padding:4px 10px;background:rgba(47,168,139,0.12);color:var(--tide);font-size:12px;font-weight:600;border-radius:999px}
+  @media(max-width:900px){.pane{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Empresa</div>
+      <nav class="side-nav">
+        <a href="empresa1.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="empresa2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Adotar Local</span></a>
+        <a href="empresa4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais Adotados</span></a>
+        <a href="empresa5.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+        <a href="empresa6.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5.882V19.24a1.76 1.76 0 0 1-3.417.592l-2.147-6.15M18 8a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3z"/></svg><span>Divulgação & Campanhas</span></a>
+        <a href="empresa7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Certificados ESG</span></a>
+        <a href="empresa8.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>Relatórios</span></a>
+        <a href="empresa10.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Suporte Prefeitura</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="empresa9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Perfil da Empresa</span></a>
+        <a href="../Site/login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Alinhamento Operacional</span>
+          <h1>Comunicação com ONGs Parceiras</h1>
+          <p>Converse diretamente com os coordenadores de campo e acompanhe o andamento dos mutirões.</p>
+        </div>
+      </div>
+
+      <div class="pane">
+        <aside class="card">
+          <h4 style="font-size:15px">ONGs Vinculadas</h4>
+          <div style="margin-top:6px">
+            <div class="ong-row">
+              <div><strong>VerdeMar ONG</strong><br><small class="small">Praia do Pier (Mongaguá)</small></div>
+              <button class="btn sm" onclick="abrir('VerdeMar ONG')">Conversar</button>
+            </div>
+            <div class="ong-row">
+              <div><strong>Guardiões do Mar</strong><br><small class="small">Costão Norte (Itanhaém)</small></div>
+              <button class="btn sm subtle" onclick="abrir('Guardiões do Mar')">Conversar</button>
+            </div>
+            <div class="ong-row">
+              <div><strong>EcoSantos ONG</strong><br><small class="small">Praia do Gonzaga (Santos)</small></div>
+              <button class="btn sm subtle" onclick="abrir('EcoSantos ONG')">Conversar</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="card conv">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--line)">
+            <div>
+              <strong id="dest">VerdeMar ONG</strong>
+              <div class="small">Gestão de Campo · Praia do Pier</div>
+            </div>
+            <span class="badge">Online</span>
+          </div>
+
+          <div class="msgbox" id="msgbox">
+            <p>Olá equipe de ESG da EcoMar! Recebemos a autorização para a instalação dos coletores na Praia do Pier.</p>
+            <p class="me">Perfeito! Já emitimos a ordem de compra dos materiais e agendamos a entrega com a Prefeitura.</p>
+            <p>Excelente! Vamos iniciar a triagem comunitária no próximo sábado às 8h.</p>
+          </div>
+
+          <div class="msg-input">
+            <input id="txt" placeholder="Digite sua mensagem para a ONG..." onkeydown="if(event.key==='Enter')enviar()">
+            <button class="btn" onclick="enviar()">Enviar</button>
+          </div>
+        </section>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da Empresa · 2025</footer>
+    </main>
+  </div>
+
+  <script src="../Site/LitoralState.js"></script>
+  <script src="../Site/demo-bar.js"></script>
+  <script>
+    function abrir(nome) {
+      document.getElementById('dest').innerText = nome;
+      LitoralState.toast(`Canal com ${nome} aberto`, 'info');
+    }
+    function enviar() {
+      const txt = document.getElementById('txt');
+      const val = txt.value.trim();
+      if (!val) return;
+      const box = document.getElementById('msgbox');
+      const p = document.createElement('p');
+      p.className = 'me';
+      p.innerText = val;
+      box.appendChild(p);
+      txt.value = '';
+      box.scrollTop = box.scrollHeight;
+
+      setTimeout(() => {
+        const resp = document.createElement('p');
+        resp.innerText = 'Recebido! Vamos incorporar essas informações ao diário de campo do mutirão.';
+        box.appendChild(resp);
+        box.scrollTop = box.scrollHeight;
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

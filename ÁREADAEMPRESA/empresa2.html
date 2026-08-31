@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Locais Disponíveis para Adoção — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Site/demo-bar.css">
+<style>
+  .adopt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:16px}
+  .adopt-card{
+    background:var(--foam);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;display:flex;flex-direction:column;justify-content:space-between;
+    box-shadow:var(--shadow-sm);transition:all .2s ease;
+  }
+  .adopt-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--kelp)}
+  .adopt-card h4{font-size:18px;color:var(--ink)}
+  .adopt-meta{margin:12px 0 16px;font-size:13.5px;color:var(--muted);line-height:1.7}
+  .adopt-meta strong{color:var(--text)}
+</style>
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Empresa</div>
+      <nav class="side-nav">
+        <a href="empresa1.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="empresa2.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Adotar Local</span></a>
+        <a href="empresa4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais Adotados</span></a>
+        <a href="empresa5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+        <a href="empresa6.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5.882V19.24a1.76 1.76 0 0 1-3.417.592l-2.147-6.15M18 8a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3z"/></svg><span>Divulgação & Campanhas</span></a>
+        <a href="empresa7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Certificados ESG</span></a>
+        <a href="empresa8.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>Relatórios</span></a>
+        <a href="empresa10.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Suporte Prefeitura</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="empresa9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Perfil da Empresa</span></a>
+        <a href="../Site/login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Oportunidades de Patrocínio</span>
+          <h1>Locais Disponíveis para Adoção</h1>
+          <p>Conecte sua empresa a trechos críticos que necessitam de apoio para mutirões de recuperação.</p>
+        </div>
+      </div>
+
+      <div class="section" style="padding:16px 20px">
+        <div class="form-row" style="margin:0">
+          <input type="text" id="buscaLocal" placeholder="Buscar por praia ou cidade..." style="flex:2" oninput="filtrar()">
+          <select id="filtroCidade" style="flex:1" onchange="filtrar()">
+            <option value="">Todas as cidades</option>
+            <option value="Mongaguá">Mongaguá</option>
+            <option value="Praia Grande">Praia Grande</option>
+            <option value="Itanhaém">Itanhaém</option>
+            <option value="Santos">Santos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="adopt-grid" id="gridLocais">
+        <!-- Populado via LitoralState -->
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da Empresa · 2025</footer>
+    </main>
+  </div>
+
+  <script src="../Site/LitoralState.js"></script>
+  <script src="../Site/demo-bar.js"></script>
+  <script>
+    function renderLocais() {
+      const state = LitoralState.getState();
+      const grid = document.getElementById('gridLocais');
+      grid.innerHTML = '';
+
+      // Mostra locais não adotados ou em análise
+      const disponiveis = state.locais.filter(l => !l.empresaMantenedora || l.status === 'analise');
+
+      if (disponiveis.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)">Todos os locais cadastrados já possuem empresas mantenedoras no momento!</div>';
+        return;
+      }
+
+      disponiveis.forEach(l => {
+        const card = document.createElement('div');
+        card.className = 'adopt-card';
+        card.setAttribute('data-cidade', l.cidade);
+        card.setAttribute('data-nome', l.nome);
+
+        card.innerHTML = `
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start">
+              <div>
+                <span class="eyebrow" style="margin:0">${l.cidade} · ${l.bairro}</span>
+                <h4>${l.nome}</h4>
+              </div>
+              <span class="status ${l.urgencia === 'Alta' ? 'alta' : 'aguardando'}">Urgência ${l.urgencia}</span>
+            </div>
+            <div class="adopt-meta">
+              <div>Tipo de resíduo: <strong>${l.tipoNome}</strong></div>
+              <div>Estimativa de resíduos: <strong>~${l.estimativaKg} kg</strong></div>
+              <div>Reportado por: <strong>${l.reporter}</strong></div>
+              <div>ONG interessada: <strong>${l.ongResponsavel || 'VerdeMar ONG'}</strong></div>
+            </div>
+          </div>
+          <button class="btn" style="width:100%;justify-content:center" onclick="adotar('${l.id}', '${l.nome}')">Adotar este Local</button>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filtrar() {
+      const txt = document.getElementById('buscaLocal').value.toLowerCase();
+      const cid = document.getElementById('filtroCidade').value;
+      const cards = document.querySelectorAll('.adopt-card');
+      cards.forEach(c => {
+        const matchesName = c.getAttribute('data-nome').toLowerCase().includes(txt);
+        const matchesCid = !cid || c.getAttribute('data-cidade') === cid;
+        c.style.display = (matchesName && matchesCid) ? 'flex' : 'none';
+      });
+    }
+
+    function adotar(id, localNome) {
+      window.location.href = `empresa3.html?id=${id}&local=${encodeURIComponent(localNome)}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', renderLocais);
+    window.addEventListener('litoral_state_change', renderLocais);
+  </script>
+</body>
+</html>

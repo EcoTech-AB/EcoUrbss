@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voluntários — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demo-bar.css">
+<style>
+  #ranking{list-style:none;padding:0;counter-reset:rank}
+  #ranking li{counter-increment:rank;display:flex;align-items:center;gap:12px;padding:10px 4px;border-bottom:1px solid var(--line);font-size:14px}
+  #ranking li:last-child{border-bottom:none}
+  #ranking li::before{content:counter(rank);width:26px;height:26px;border-radius:50%;background:var(--sand-deep);color:var(--ink);font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none}
+  #ranking li:nth-child(1)::before{background:var(--kelp);color:#fff}
+</style>
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+      <div class="nav-label">Painel</div>
+      <nav class="side-nav">
+        <a href="ong1.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="ong2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg><span>Locais disponíveis</span></a>
+        <a href="ong3.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais ativos</span></a>
+        <a href="ong4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg><span>Registrar ação</span></a>
+        <a href="ong5.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg><span>Voluntários</span></a>
+        <a href="ong7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="ong9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg><span>Meu perfil</span></a>
+        <a href="login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Sua equipe</span>
+          <h1>Voluntários e colaboradores</h1>
+          <p>Gerencie sua equipe e acompanhe a pontuação de cada pessoa.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="form-row">
+          <input id="nome" placeholder="Nome do voluntário" style="flex:1">
+          <input id="contato" placeholder="Contato (@user ou WhatsApp)" style="flex:1">
+          <button class="btn" onclick="adicionar()">Adicionar</button>
+        </div>
+
+        <table style="margin-top:16px">
+          <thead><tr><th>Nome</th><th>Contato</th><th>Participações</th><th>Pontos</th><th></th></tr></thead>
+          <tbody id="vol-list">
+            <!-- Populado via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da ONG · 2025</footer>
+    </main>
+  </div>
+
+  <script src="LitoralState.js"></script>
+  <script src="demo-bar.js"></script>
+  <script>
+    function renderVoluntarios() {
+      const state = LitoralState.getState();
+      const tbody = document.getElementById('vol-list');
+      tbody.innerHTML = '';
+      state.ong.voluntarios.forEach((v, index) => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${v.nome}</strong></td>
+          <td class="mono-cell">${v.contato}</td>
+          <td class="mono-cell">${v.participacoes}</td>
+          <td class="mono-cell">${v.pontos}</td>
+          <td><button class="btn sm subtle" onclick="remover(${index})">Remover</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function adicionar() {
+      const n = document.getElementById('nome').value.trim();
+      const c = document.getElementById('contato').value.trim();
+      if (!n) return;
+      const state = LitoralState.getState();
+      state.ong.voluntarios.push({ nome: n, contato: c || '@voluntario', participacoes: 1, pontos: 50 });
+      localStorage.setItem('litoral_limpo_state_v1', JSON.stringify(state));
+      document.getElementById('nome').value = '';
+      document.getElementById('contato').value = '';
+      LitoralState.toast(`Voluntário ${n} cadastrado com sucesso!`, 'success');
+      renderVoluntarios();
+    }
+
+    function remover(index) {
+      const state = LitoralState.getState();
+      state.ong.voluntarios.splice(index, 1);
+      localStorage.setItem('litoral_limpo_state_v1', JSON.stringify(state));
+      renderVoluntarios();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderVoluntarios);
+  </script>
+</body>
+</html>

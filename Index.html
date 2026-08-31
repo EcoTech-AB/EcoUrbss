@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Litoral Limpo</title>
+  <link rel="stylesheet" href="Site/styles.css">
+  <link rel="stylesheet" href="Site/demo-bar.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex
+    }
+
+    .auth-shell {
+      display: flex;
+      width: 100%;
+      min-height: 100vh
+    }
+
+    .auth-brand {
+      flex: 1 1 46%;
+      background: linear-gradient(160deg, var(--ink) 0%, var(--tide-dark) 100%);
+      color: #fff;
+      padding: 56px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .auth-brand svg.waves {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .5
+    }
+
+    .auth-brand .content {
+      position: relative;
+      z-index: 2
+    }
+
+    .auth-brand .brand {
+      border: none;
+      padding: 0;
+      margin-bottom: 56px
+    }
+
+    .auth-brand h2 {
+      font-size: 32px;
+      color: #fff;
+      line-height: 1.2;
+      max-width: 420px
+    }
+
+    .auth-brand p.lede {
+      color: #BFE0D5;
+      margin-top: 14px;
+      font-size: 15px;
+      max-width: 380px
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 22px;
+      position: relative;
+      z-index: 2;
+      margin-top: 40px;
+      flex-wrap: wrap
+    }
+
+    .stat-row div strong {
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 22px;
+      color: var(--kelp-light)
+    }
+
+    .stat-row div span {
+      font-size: 12px;
+      color: #9CC8BB
+    }
+
+    .auth-form-side {
+      flex: 1 1 54%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background: var(--sand)
+    }
+
+    .auth-card {
+      background: var(--foam);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 40px 40px 32px;
+      width: 100%;
+      max-width: 420px
+    }
+
+    .auth-card .eyebrow {
+      margin-bottom: 2px
+    }
+
+    .auth-card h1 {
+      font-size: 24px;
+      margin-bottom: 6px
+    }
+
+    .auth-card p.sub {
+      color: var(--muted);
+      font-size: 13.5px;
+      margin-bottom: 22px
+    }
+
+    .switch-link {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 13.5px;
+      color: var(--muted)
+    }
+
+    .switch-link a {
+      color: var(--tide);
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .switch-link a:hover {
+      text-decoration: underline
+    }
+
+    .demo-quick-login {
+      margin-top: 20px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--line);
+      text-align: center;
+    }
+
+    .demo-quick-login span {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      display: block;
+      margin-bottom: 10px
+    }
+
+    .quick-roles {
+      display: flex;
+      gap: 8px;
+      justify-content: center
+    }
+
+    @media(max-width:860px) {
+      .auth-brand {
+        display: none
+      }
+
+      .auth-form-side {
+        flex: 1 1 100%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="auth-shell">
+    <section class="auth-brand">
+      <div class="content">
+        <div class="brand">
+          <div style="display:flex;align-items:center;gap:10px">
+            <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
+              <path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2"
+                stroke-linecap="round" />
+              <path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2"
+                stroke-linecap="round" />
+              <circle cx="15" cy="7" r="4.5" fill="#FF6B4A" />
+            </svg>
+            <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+          </div>
+        </div>
+        <h2>Toda maré que sobe encontra um trecho de praia já limpo.</h2>
+        <p class="lede">Cidadãos, ONGs e empresas coordenando mutirões, adotando trechos de litoral e acompanhando o
+          impacto em tempo real.</p>
+        <div class="stat-row">
+          <div><strong>1.050 kg</strong><span>resíduos retirados</span></div>
+          <div><strong>42</strong><span>voluntários ativos</span></div>
+          <div><strong>6</strong><span>praias monitoradas</span></div>
+        </div>
+      </div>
+      <svg class="waves" viewBox="0 0 500 120" preserveAspectRatio="none" width="100%" height="120">
+        <path d="M0 60c40-25 80-25 120 0s80 25 120 0 80-25 120 0 80 25 140 0v60H0z" fill="#145a52" opacity="0.6" />
+        <path d="M0 80c40-20 80-20 120 0s80 20 120 0 80-20 120 0 80 20 140 0v40H0z" fill="#0E2E29" />
+      </svg>
+    </section>
+
+    <section class="auth-form-side">
+      <div class="auth-card">
+        <span class="eyebrow">Acesso à Plataforma</span>
+        <h1>Entrar</h1>
+        <p class="sub">Acesse o painel para continuar suas ações.</p>
+        <form id="loginForm">
+          <label for="username">E-mail ou Usuário</label>
+          <input type="text" id="username" name="username" value="carlos.eduardo@exemplo.com" required autofocus />
+
+          <label for="password">Senha</label>
+          <input type="password" id="password" name="password" value="••••••••" required />
+
+          <label for="userType">Entrar como</label>
+          <select id="userType" name="userType" required>
+            <option value="../ÁREADOCIDADÃO/cidadao1.html">🙋‍♂️ Cidadão (Carlos Eduardo)</option>
+            <option value="../ÁREADAEMPRESA/empresa1.html">🏢 Empresa ESG (EcoMar Soluções)</option>
+            <option value="Site/ong1.html">🌿 ONG (VerdeMar ONG)</option>
+          </select>
+
+          <button type="submit" class="btn" style="width:100%;justify-content:center;margin-top:18px">Entrar</button>
+        </form>
+
+        <div class="demo-quick-login">
+          <span>⚡ Acesso Rápido para Avaliadores</span>
+          <div class="quick-roles">
+            <a href="../ÁREADOCIDADÃO/cidadao1.html" class="btn sm subtle">Cidadão</a>
+            <a href="../ÁREADAEMPRESA/empresa1.html" class="btn sm subtle">Empresa</a>
+            <a href="Site/ong1.html" class="btn sm subtle">ONG</a>
+          </div>
+        </div>
+
+        <div class="switch-link">Ainda não tem conta? <a href="Site/cadastro.html">Cadastre-se</a></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="Site/LitoralState.js"></script>
+  <script src="Site/demo-bar.js"></script>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const userType = document.getElementById('userType').value;
+      if (userType) {
+        window.location.href = userType;
+      }
+    });
+  </script>
+</body>
+
+</html>

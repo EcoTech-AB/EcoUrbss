@@ -1,0 +1,89 @@
+/* demo-bar.css - Hackathon Presentation & Role Switcher Bar */
+#litoral-demo-bar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999;
+  background: rgba(14, 46, 41, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  font-family: 'Inter', Arial, sans-serif;
+  transition: all 0.25s ease;
+}
+
+#litoral-demo-bar:hover {
+  box-shadow: 0 20px 42px -8px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(47, 168, 139, 0.4);
+}
+
+.demo-bar-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8FD6C1;
+  font-weight: 700;
+  padding: 0 8px 0 6px;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.demo-btn {
+  background: transparent;
+  color: #E8F3EF;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.demo-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.demo-btn.active {
+  background: var(--kelp, #2FA88B);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(47, 168, 139, 0.4);
+}
+
+.demo-btn-reset {
+  background: rgba(255, 107, 74, 0.2);
+  color: #FF6B4A;
+  border: 1px solid rgba(255, 107, 74, 0.3);
+}
+
+.demo-btn-reset:hover {
+  background: #FF6B4A;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #litoral-demo-bar {
+    bottom: 12px;
+    right: 12px;
+    left: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 16px;
+  }
+  .demo-bar-label {
+    display: none;
+  }
+}

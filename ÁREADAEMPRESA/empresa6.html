@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Divulgação e Campanhas — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Site/demo-bar.css">
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Empresa</div>
+      <nav class="side-nav">
+        <a href="empresa1.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="empresa2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Adotar Local</span></a>
+        <a href="empresa4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais Adotados</span></a>
+        <a href="empresa5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+        <a href="empresa6.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5.882V19.24a1.76 1.76 0 0 1-3.417.592l-2.147-6.15M18 8a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3z"/></svg><span>Divulgação & Campanhas</span></a>
+        <a href="empresa7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Certificados ESG</span></a>
+        <a href="empresa8.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>Relatórios</span></a>
+        <a href="empresa10.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Suporte Prefeitura</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="empresa9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Perfil da Empresa</span></a>
+        <a href="../Site/login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Engajamento Comunitário</span>
+          <h1>Divulgação e Campanhas Institucionais</h1>
+          <p>Crie ações de conscientização promovidas pela empresa na orla e redes sociais.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="font-size:18px;margin-bottom:14px">Criar Nova Campanha</h3>
+        <form onsubmit="salvarCampanha(event)">
+          <label for="tituloCampanha">Título da Campanha</label>
+          <input type="text" id="tituloCampanha" placeholder="Ex: Verão Sem Plástico 2026" required>
+
+          <div class="form-row">
+            <div style="flex:1">
+              <label for="localCampanha">Praia / Local Vinculado</label>
+              <select id="localCampanha">
+                <option>Praia do Pier (Mongaguá)</option>
+                <option>Orla Sul (Praia Grande)</option>
+                <option>Costão Norte (Itanhaém)</option>
+                <option>Todas as praias adotadas</option>
+              </select>
+            </div>
+            <div style="flex:1">
+              <label for="metaCampanha">Meta de Engajamento</label>
+              <input type="text" id="metaCampanha" placeholder="Ex: 50 voluntários / 500kg">
+            </div>
+          </div>
+
+          <label for="descCampanha">Mensagem & Chamada para Ação</label>
+          <textarea id="descCampanha" rows="3" placeholder="Descreva o propósito da ação e os incentivos oferecidos pela sua empresa..."></textarea>
+
+          <div style="display:flex;gap:10px;margin-top:20px">
+            <button type="submit" class="btn">Publicar Campanha</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="section" style="margin-top:24px">
+        <h3>Campanhas Ativas da Empresa</h3>
+        <table style="margin-top:12px">
+          <thead><tr><th>Campanha</th><th>Local</th><th>Alcance Estimado</th><th>Inscritos</th><th>Status</th></tr></thead>
+          <tbody id="campanhasTbody">
+            <!-- Populado via LitoralState -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da Empresa · 2025</footer>
+    </main>
+  </div>
+
+  <script src="../Site/LitoralState.js"></script>
+  <script src="../Site/demo-bar.js"></script>
+  <script>
+    function renderCampanhas() {
+      const state = LitoralState.getState();
+      const tbody = document.getElementById('campanhasTbody');
+      tbody.innerHTML = '';
+
+      state.empresa.campanhas.forEach(c => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${c.titulo}</strong></td>
+          <td>${c.local}</td>
+          <td class="mono-cell">${c.alcance.toLocaleString('pt-BR')} pessoas</td>
+          <td class="mono-cell">${c.inscritos}</td>
+          <td><span class="status ${c.status === 'Ativa' ? 'andamento' : 'concluido'}">${c.status}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function salvarCampanha(e) {
+      e.preventDefault();
+      const t = document.getElementById('tituloCampanha').value;
+      const l = document.getElementById('localCampanha').value;
+      const state = LitoralState.getState();
+      state.empresa.campanhas.unshift({
+        id: Date.now(),
+        titulo: t,
+        local: l,
+        alcance: 1200,
+        inscritos: 0,
+        status: 'Ativa'
+      });
+      localStorage.setItem('litoral_limpo_state_v1', JSON.stringify(state));
+      LitoralState.toast(`Campanha "${t}" lançada com sucesso!`, 'success');
+      document.getElementById('tituloCampanha').value = '';
+      document.getElementById('descCampanha').value = '';
+      renderCampanhas();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderCampanhas);
+  </script>
+</body>
+</html>

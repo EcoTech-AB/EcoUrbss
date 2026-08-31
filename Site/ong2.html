@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Locais Disponíveis — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demo-bar.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  .item{display:flex;gap:14px;padding:14px 4px;border-bottom:1px solid var(--line)}
+  .item:last-child{border-bottom:none}
+  .item img{width:110px;height:78px;object-fit:cover;border-radius:10px;background:var(--sand-deep)}
+  .item .meta{flex:1;min-width:0}
+  .item .meta h4{font-family:'Fraunces',serif;font-weight:600;font-size:15.5px;color:var(--ink)}
+  .item .meta p{font-size:13.5px;color:var(--muted);margin-top:2px}
+  .item .actions-col{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  .map-container{height:340px;border-radius:var(--radius);border:1px solid var(--line);margin-top:18px}
+  .container-grid{display:grid;grid-template-columns:300px 1fr;gap:18px}
+  @media(max-width:900px){.container-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+      <div class="nav-label">Painel ONG</div>
+      <nav class="side-nav">
+        <a href="ong1.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="ong2.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg><span>Locais disponíveis</span></a>
+        <a href="ong3.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais ativos</span></a>
+        <a href="ong4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg><span>Registrar ação</span></a>
+        <a href="ong5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg><span>Voluntários</span></a>
+        <a href="ong7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="ong9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg><span>Meu perfil</span></a>
+        <a href="login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Mapa de Oportunidades</span>
+          <h1>Locais disponíveis para ação</h1>
+          <p>Escolha um ponto reportado por cidadãos e assuma a liderança da limpeza.</p>
+        </div>
+      </div>
+
+      <div class="container-grid">
+        <aside class="card" style="align-self:flex-start">
+          <h4 style="font-size:15px">Filtros</h4>
+          <label for="cidade">Cidade</label>
+          <select id="cidade" onchange="aplicar()"><option value="">Todas as cidades</option><option>Mongaguá</option><option>Praia Grande</option><option>Itanhaém</option><option>Santos</option></select>
+          <label for="tipo">Tipo de poluição</label>
+          <select id="tipo" onchange="aplicar()"><option value="">Qualquer tipo</option><option value="lixo">Lixo plástico</option><option value="entulho">Entulho</option><option value="oleo">Óleo / Químico</option></select>
+          <label for="urgencia">Urgência</label>
+          <select id="urgencia" onchange="aplicar()"><option value="">Qualquer urgência</option><option>Alta</option><option>Média</option><option>Baixa</option></select>
+        </aside>
+
+        <section>
+          <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;margin-bottom:8px">
+            <h3 style="font-size:16px">Resultados</h3>
+            <small id="count" class="mono small">0 locais encontrados</small>
+          </div>
+          <div class="card" id="lista"></div>
+        </section>
+      </div>
+
+      <div id="ongMap" class="map-container"></div>
+
+      <footer>Projeto Litoral Limpo — Área da ONG · 2025</footer>
+    </main>
+  </div>
+
+  <script src="LitoralState.js"></script>
+  <script src="demo-bar.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    let map, markers = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initMap();
+      aplicar();
+    });
+
+    function initMap() {
+      map = L.map('ongMap').setView([-24.0934, -46.55], 11);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    }
+
+    function aplicar() {
+      const state = LitoralState.getState();
+      const cidade = document.getElementById('cidade').value;
+      const tipo = document.getElementById('tipo').value;
+      const urg = document.getElementById('urgencia').value;
+
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+
+      const disponiveis = state.locais.filter(l => {
+        const matchCid = !cidade || l.cidade === cidade;
+        const matchTipo = !tipo || l.tipo === tipo;
+        const matchUrg = !urg || l.urgencia === urg;
+        return matchCid && matchTipo && matchUrg;
+      });
+
+      const cont = document.getElementById('lista');
+      cont.innerHTML = '';
+
+      if (disponiveis.length === 0) {
+        cont.innerHTML = '<p class="small" style="text-align:center;padding:20px;color:var(--muted)">Nenhum local disponível com os filtros atuais.</p>';
+        document.getElementById('count').innerText = '0 locais encontrados';
+        return;
+      }
+
+      disponiveis.forEach(l => {
+        const div = document.createElement('div');
+        div.className = 'item';
+        div.innerHTML = `
+          <img src="${l.foto}" alt="${l.nome}">
+          <div class="meta">
+            <h4>${l.nome} — ${l.cidade}</h4>
+            <p>${l.descricao}</p>
+            <span class="status ${l.urgencia === 'Alta' ? 'alta' : 'andamento'}">Urgência ${l.urgencia} · ${l.estimativaKg} kg</span>
+          </div>
+          <div class="actions-col">
+            <button class="btn sm" onclick="assumir(${l.id})">Assumir local</button>
+            <button class="btn sm subtle" onclick="ver(${l.id})">Ver no mapa</button>
+          </div>
+        `;
+        cont.appendChild(div);
+
+        // Marker
+        const marker = L.marker(l.coords).addTo(map).bindPopup(`<strong>${l.nome}</strong><br>${l.cidade}<br><button onclick="assumir(${l.id})" style="margin-top:6px;padding:4px 8px;border-radius:4px;border:none;background:#1C7A6E;color:#fff;cursor:pointer">Assumir</button>`);
+        marker.localId = l.id;
+        markers.push(marker);
+      });
+
+      document.getElementById('count').innerText = `${disponiveis.length} locais encontrados`;
+    }
+
+    function assumir(id) {
+      const state = LitoralState.getState();
+      const local = state.locais.find(l => l.id === id);
+      if (confirm(`Confirmar assunção da liderança de limpeza para "${local.nome}"?`)) {
+        LitoralState.assumeLocal(id, state.ong.nome);
+        aplicar();
+      }
+    }
+
+    function ver(id) {
+      const state = LitoralState.getState();
+      const local = state.locais.find(l => l.id === id);
+      if (local && map) {
+        map.setView(local.coords, 14, { animate: true });
+        const m = markers.find(mark => mark.localId === id);
+        if (m) m.openPopup();
+      }
+    }
+
+    window.addEventListener('litoral_state_change', aplicar);
+  </script>
+</body>
+</html>

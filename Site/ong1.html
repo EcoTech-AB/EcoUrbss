@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel da ONG — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="demo-bar.css">
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Painel ONG</div>
+      <nav class="side-nav">
+        <a href="ong1.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="ong2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg><span>Locais disponíveis</span></a>
+        <a href="ong3.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais ativos</span></a>
+        <a href="ong4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg><span>Registrar ação</span></a>
+        <a href="ong5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="18" cy="9" r="2.4"/><path d="M15.5 14.2c2.6.4 4.5 2.6 4.5 5.3"/></svg><span>Voluntários</span></a>
+        <a href="ong7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="ong9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg><span>Meu perfil</span></a>
+        <a href="login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="hero-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+          <div>
+            <span class="eyebrow" style="color:var(--kelp-light)">Área da ONG</span>
+            <h1 id="ongNomeHeader">Bem-vinda, VerdeMar ONG</h1>
+            <p>Resumo operacional das ações, voluntariado e parcerias com empresas.</p>
+          </div>
+          <div class="sync">Última sincronização<br><strong style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#fff">320 Pontos da ONG</strong></div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="stat"><h2 id="countOngCidades">3</h2><p>Cidades de atuação</p></div>
+        <div class="stat"><h2 id="countOngLimpos">12</h2><p>Locais limpos concluídos</p></div>
+        <div class="stat"><h2 id="countOngPontos">320</h2><p>Pontos totais da ONG</p></div>
+        <div class="stat"><h2 id="countOngVoluntarios">42</h2><p>Voluntários ativos</p></div>
+      </div>
+
+      <div class="section">
+        <h3>Progresso das Metas Mensais</h3>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:14px">
+          <div style="flex:1;min-width:180px">
+            <div style="display:flex;justify-content:space-between"><small class="small">Mongaguá</small><small class="mono small">75%</small></div>
+            <div class="progress"><div style="width:75%"></div></div>
+          </div>
+          <div style="flex:1;min-width:180px">
+            <div style="display:flex;justify-content:space-between"><small class="small">Praia Grande</small><small class="mono small">60%</small></div>
+            <div class="progress"><div style="width:60%"></div></div>
+          </div>
+          <div style="flex:1;min-width:180px">
+            <div style="display:flex;justify-content:space-between"><small class="small">Itanhaém</small><small class="mono small">100%</small></div>
+            <div class="progress"><div style="width:100%"></div></div>
+          </div>
+        </div>
+
+        <div class="shortcuts">
+          <button class="shortcut" onclick="location.href='ong2.html'">Ver locais disponíveis para assumir</button>
+          <button class="shortcut" onclick="location.href='ong3.html'">Gerenciar locais ativos</button>
+          <button class="shortcut" onclick="location.href='ong4.html'">+ Registrar ação de mutirão</button>
+          <button class="shortcut" onclick="location.href='ong5.html'">Gerenciar voluntários</button>
+          <button class="shortcut" onclick="location.href='ong7.html'">Falar com empresas</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+          <h3>Locais sob responsabilidade da ONG</h3>
+          <a href="ong3.html" class="btn ghost sm">Ver todos</a>
+        </div>
+        <table>
+          <thead><tr><th>Local</th><th>Status</th><th>Início</th><th>Progresso</th><th></th></tr></thead>
+          <tbody id="tabelaOngLocais">
+            <!-- Populado via LitoralState -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da ONG · 2025</footer>
+    </main>
+  </div>
+
+  <script src="LitoralState.js"></script>
+  <script src="demo-bar.js"></script>
+  <script>
+    function render() {
+      const state = LitoralState.getState();
+      const ong = state.ong;
+      document.getElementById('ongNomeHeader').innerText = `Bem-vinda, ${ong.nome}`;
+      document.getElementById('countOngPontos').innerText = ong.pontosONG;
+      document.getElementById('countOngVoluntarios').innerText = ong.voluntarios.length * 14;
+
+      const meusLocais = state.locais.filter(l => l.ongResponsavel && l.ongResponsavel.includes('VerdeMar'));
+      const tbody = document.getElementById('tabelaOngLocais');
+      tbody.innerHTML = '';
+
+      meusLocais.forEach(l => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${l.nome}</strong><br><small class="small">${l.cidade} · ${l.bairro}</small></td>
+          <td><span class="status ${l.status}">${l.statusNome}</span></td>
+          <td class="mono-cell">${l.dataReporte}</td>
+          <td class="mono-cell">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="progress" style="width:80px;margin:0"><div style="width:${l.progresso}%"></div></div>
+              <span>${l.progresso}%</span>
+            </div>
+          </td>
+          <td><a href="ong4.html" class="btn sm">Registrar Ação</a></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+    window.addEventListener('litoral_state_change', render);
+  </script>
+</body>
+</html>

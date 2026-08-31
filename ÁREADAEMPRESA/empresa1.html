@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel Corporativo ESG — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Site/demo-bar.css">
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  .charts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:20px}
+  .chart-card{background:var(--foam);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm)}
+  .chart-card h4{font-size:16px;color:var(--ink);margin-bottom:14px}
+</style>
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Empresa</div>
+      <nav class="side-nav">
+        <a href="empresa1.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="empresa2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Adotar Local</span></a>
+        <a href="empresa4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Locais Adotados</span></a>
+        <a href="empresa5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a7.5 7.5 0 0 1-11.3 6.5L4 19l1.1-4.2A7.5 7.5 0 1 1 21 11.5z"/></svg><span>Comunicação</span></a>
+        <a href="empresa6.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 5.882V19.24a1.76 1.76 0 0 1-3.417.592l-2.147-6.15M18 8a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3z"/></svg><span>Divulgação & Campanhas</span></a>
+        <a href="empresa7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Certificados ESG</span></a>
+        <a href="empresa8.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg><span>Relatórios</span></a>
+        <a href="empresa10.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg><span>Suporte Prefeitura</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="empresa9.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Perfil da Empresa</span></a>
+        <a href="../Site/login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="hero-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+          <div>
+            <span class="eyebrow" style="color:var(--kelp-light)">Painel Executivo & Governança ESG</span>
+            <h1 id="heroRazao">Bem-vinda, EcoMar Soluções S.A.</h1>
+            <p>Gestão de ativos territoriais, métricas auditáveis e certificações socioambientais.</p>
+          </div>
+          <div class="sync">Selo Vigente<br><strong style="font-family:'IBM Plex Mono',monospace;font-size:15px;color:#fff">Empresa Amiga da Praia 2025</strong></div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="stat"><h2 id="countAdotados">5</h2><p>Locais adotados</p></div>
+        <div class="stat"><h2 id="countLimpos">12</h2><p>Áreas limpas concluídas</p></div>
+        <div class="stat"><h2 id="countONGs">3</h2><p>ONGs parceiras</p></div>
+        <div class="stat"><h2 id="countESG">1.200</h2><p>Pontos ESG acumulados</p></div>
+      </div>
+
+      <!-- Gráficos Analíticos com Chart.js -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h4>📈 Evolução Mensal de Resíduos Retirados (kg)</h4>
+          <canvas id="chartEvolucao" height="200"></canvas>
+        </div>
+        <div class="chart-card">
+          <h4>♻️ Tipos de Materiais Reciclados</h4>
+          <canvas id="chartMateriais" height="200"></canvas>
+        </div>
+      </div>
+
+      <div class="section" style="margin-top:20px">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+          <h3>Locais sob patrocínio ativo da empresa</h3>
+          <a href="empresa4.html" class="btn ghost sm">Ver detalhes completos</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Local Adotado</th>
+              <th>ONG Parceira</th>
+              <th>Início</th>
+              <th>Progresso</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabelaEmpresaLocais">
+            <!-- Populado via LitoralState -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área da Empresa · 2025</footer>
+    </main>
+  </div>
+
+  <script src="../Site/LitoralState.js"></script>
+  <script src="../Site/demo-bar.js"></script>
+  <script>
+    let chart1, chart2;
+
+    function render() {
+      const state = LitoralState.getState();
+      const emp = state.empresa;
+      document.getElementById('heroRazao').innerText = `Bem-vinda, ${emp.razaoSocial}`;
+      document.getElementById('countESG').innerText = emp.pontosESG;
+
+      const adotados = state.locais.filter(l => l.empresaMantenedora && l.empresaMantenedora.includes('EcoMar'));
+      document.getElementById('countAdotados').innerText = adotados.length;
+      document.getElementById('countLimpos').innerText = state.locais.filter(l => l.status === 'concluido').length;
+
+      const tbody = document.getElementById('tabelaEmpresaLocais');
+      tbody.innerHTML = '';
+      adotados.forEach(l => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${l.nome}</strong><br><small class="small">${l.cidade} · ${l.bairro}</small></td>
+          <td>${l.ongResponsavel || 'VerdeMar ONG'}</td>
+          <td class="mono-cell">${l.dataReporte}</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:8px">
+              <div class="progress" style="flex:1;margin:0"><div style="width:${l.progresso}%"></div></div>
+              <span class="mono small">${l.progresso}%</span>
+            </div>
+          </td>
+          <td><span class="status ${l.status}">${l.statusNome}</span></td>
+          <td><a href="empresa4.html" class="btn sm subtle">Detalhes</a></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      renderCharts();
+    }
+
+    function renderCharts() {
+      if (chart1) chart1.destroy();
+      if (chart2) chart2.destroy();
+
+      const ctx1 = document.getElementById('chartEvolucao').getContext('2d');
+      chart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: ['Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov'],
+          datasets: [{
+            label: 'kg de resíduos recolhidos',
+            data: [120, 240, 310, 480, 720, 1050],
+            borderColor: '#1C7A6E',
+            backgroundColor: 'rgba(47, 168, 139, 0.15)',
+            fill: true,
+            tension: 0.35,
+            borderWidth: 2.5
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } }
+        }
+      });
+
+      const ctx2 = document.getElementById('chartMateriais').getContext('2d');
+      chart2 = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+          labels: ['Plásticos & PET', 'Bitucas', 'Redes de Pesca', 'Entulho / Outros'],
+          datasets: [{
+            data: [58, 22, 12, 8],
+            backgroundColor: ['#1C7A6E', '#2FA88B', '#D98A0B', '#FF6B4A']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+    window.addEventListener('litoral_state_change', render);
+  </script>
+</body>
+</html>

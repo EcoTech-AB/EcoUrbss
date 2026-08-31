@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel do Cidadão — Litoral Limpo</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../Site/demo-bar.css">
+</head>
+<body class="tide-bg">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M2 20c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#8FD6C1" stroke-width="2" stroke-linecap="round"/><path d="M2 26c3 0 3-4 6-4s3 4 6 4 3-4 6-4 3 4 6 4" stroke="#2FA88B" stroke-width="2" stroke-linecap="round"/><circle cx="15" cy="7" r="4.5" fill="#FF6B4A"/></svg>
+        <div><span class="brand-name">Eco‑Urbs</span><span class="brand-tag">Litoral Limpo</span></div>
+      </div>
+
+      <div class="nav-label">Cidadão</div>
+      <nav class="side-nav">
+        <a href="cidadao1.html" class="active"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/></svg><span>Início</span></a>
+        <a href="cidadao2.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h3l2-2.5h6L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.4"/></svg><span>Reportar local</span></a>
+        <a href="cidadao3.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.2 2.2L16 10"/></svg><span>Meus reportes</span></a>
+        <a href="cidadao4.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7v4h10v-4h-2c-.55 0-1-.45-1-1v-2.34c3.08-.75 5-3.3 5-6.66V4H5v4c0 3.36 1.92 5.91 5 6.66z"/></svg><span>Missões e Pontos</span></a>
+        <a href="cidadao5.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v10H4V12"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><span>Loja de Recompensas</span></a>
+        <a href="cidadao6.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span>Locais em Destaque</span></a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="nav-label" style="margin-top:0">Conta</div>
+        <a href="cidadao7.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/></svg><span>Meu perfil</span></a>
+        <a href="../Site/login.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg><span>Sair</span></a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="hero-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap">
+          <div>
+            <span class="eyebrow" style="color:var(--kelp-light)">Área do Cidadão</span>
+            <h1 id="heroNome">Bem-vindo(a), Carlos Eduardo!</h1>
+            <p>Seu olhar atento transforma o litoral em praias mais limpas e preservadas.</p>
+          </div>
+          <div class="sync">Saldo disponível<br><strong id="heroPontos" style="font-family:'IBM Plex Mono',monospace;font-size:18px">180 Pontos</strong></div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="stat"><h2 id="countReportados">3</h2><p>Locais reportados</p></div>
+        <div class="stat"><h2 id="countValidados">2</h2><p>Ações validadas</p></div>
+        <div class="stat"><h2 id="countPontos">180</h2><p>Pontos acumulados</p></div>
+        <div class="stat"><h2 id="countRecompensas">1</h2><p>Recompensas trocadas</p></div>
+      </div>
+
+      <div class="section">
+        <h3>Seu progresso como Guardião</h3>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
+          <div>
+            <strong id="nivelTexto">Nível 3 — Guardião da Praia</strong>
+            <div class="small" id="nivelSub">Faltam 120 pontos para o Nível 4</div>
+          </div>
+          <span class="mono small" id="nivelPerc" style="font-weight:600;color:var(--tide)">60%</span>
+        </div>
+        <div class="progress" style="margin-top:10px"><div id="nivelBarra" style="width:60%"></div></div>
+
+        <div class="shortcuts">
+          <button class="shortcut" onclick="location.href='cidadao2.html'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Reportar novo local (+50 pts)
+          </button>
+          <button class="shortcut" onclick="location.href='cidadao3.html'">Ver meus reportes</button>
+          <button class="shortcut" onclick="location.href='cidadao5.html'">Trocar pontos na loja</button>
+          <button class="shortcut" onclick="location.href='cidadao4.html'">Missões ativas</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+          <h3>Últimos reportes enviados</h3>
+          <a href="cidadao3.html" class="btn ghost sm">Ver todos</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Local</th>
+              <th>Categoria</th>
+              <th>Data</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabelaReportes">
+            <!-- Populado via LitoralState -->
+          </tbody>
+        </table>
+      </div>
+
+      <footer>Projeto Litoral Limpo — Área do Cidadão · 2025</footer>
+    </main>
+  </div>
+
+  <script src="../Site/LitoralState.js"></script>
+  <script src="../Site/demo-bar.js"></script>
+  <script>
+    function render() {
+      const state = LitoralState.getState();
+      const c = state.cidadao;
+      document.getElementById('heroNome').innerText = `Bem-vindo(a), ${c.nome}!`;
+      document.getElementById('heroPontos').innerText = `${c.pontos} Pontos`;
+      document.getElementById('countPontos').innerText = c.pontos;
+      document.getElementById('countRecompensas').innerText = c.recompensasResgatadas.length;
+
+      const meusReportes = state.locais.filter(l => l.reporter === c.nome);
+      document.getElementById('countReportados').innerText = meusReportes.length;
+      document.getElementById('countValidados').innerText = meusReportes.filter(l => l.status !== 'analise').length;
+
+      // Nível
+      const perc = Math.min(100, Math.round((c.pontos / c.proximoNivelPts) * 100));
+      document.getElementById('nivelTexto').innerText = `Nível ${c.nivel} — ${c.nivelNome}`;
+      document.getElementById('nivelSub').innerText = `Faltam ${Math.max(0, c.proximoNivelPts - c.pontos)} pontos para o próximo nível`;
+      document.getElementById('nivelPerc').innerText = `${perc}% (${c.pontos} / ${c.proximoNivelPts} pts)`;
+      document.getElementById('nivelBarra').style.width = `${perc}%`;
+
+      // Tabela
+      const tbody = document.getElementById('tabelaReportes');
+      tbody.innerHTML = '';
+      meusReportes.slice(0, 4).forEach(l => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${l.nome}</strong><br><small class="small">${l.cidade} · ${l.bairro}</small></td>
+          <td><span class="status ${l.urgencia === 'Alta' ? 'alta' : 'andamento'}">${l.tipoNome}</span></td>
+          <td class="mono-cell">${l.dataReporte}</td>
+          <td><span class="status ${l.status}">${l.statusNome}</span></td>
+          <td><a href="cidadao3.html" class="btn sm subtle">Ver detalhes</a></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', render);
+    window.addEventListener('litoral_state_change', render);
+  </script>
+</body>
+</html>
